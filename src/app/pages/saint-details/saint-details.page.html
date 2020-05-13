@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Details of <b>{{saintObject.name}}</b></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="bg-white">
+        <ion-card-header>
+            <ion-card-title>{{saintObject.name}}</ion-card-title>
+            <ion-card-subtitle>{{saintObject.year}}</ion-card-subtitle>
+            <ion-card-subtitle>{{saintObject.brundavana_pravesha}}</ion-card-subtitle>
+            <ion-card-subtitle>{{saintObject.more_info}}</ion-card-subtitle>
+        </ion-card-header>
+
+        <img src="../../../assets/parampare/{{saintObject.image}}">
+
+        <audio controls class="charma-shloka">
+      <source src="../../../assets/charama_shloka/{{saintObject.charama_shloka}}" type="audio/mpeg">
+      <source src="../../../assets/charama_shloka/{{saintObject.charama_shloka}}" type="audio/ogg">
+    </audio>
+    </ion-card>
+</ion-content>

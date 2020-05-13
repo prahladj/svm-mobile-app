@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Guru Parampara</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="ion-no-padding">
+        <ion-item-divider color="medium" sticky>
+            <h6 class="light-text ion-text-center">Jagadguru Sriman Madhwacharya moola mahasamsthanam <br /> <br /> Sri Sri Vyasaraja matha(Sosale) guru parampara</h6>
+        </ion-item-divider>
+
+        <ion-item *ngFor="let saint of yatiList" (click)="saintDetailsPage(saint)">
+            <ion-avatar slot="start">
+                <img src="../../../assets/parampare/{{saint.image}}">
+            </ion-avatar>
+            <ion-label text-wrap>
+                <h2>
+                    <b>{{saint.name}}</b>
+                </h2>
+                <span>{{saint.year}}</span>
+            </ion-label>
+            <ion-icon name="md-arrow-dropright" slot="end"></ion-icon>
+        </ion-item>
+    </ion-list>
+
+    <!-- <ion-button expand="block" routerLink="/menu/first/tabs/tab2/add-user" routerDirection="forward">
+        Add User Button
+    </ion-button> -->
+</ion-content>
